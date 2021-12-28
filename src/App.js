@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {Routes, Route} from 'react-router-dom';
 import Home from './pages/Home.jsx';
@@ -6,6 +5,7 @@ import Search from './pages/Search.jsx';
 import NavBar from './components/NavBar.jsx';
 
 function App() {
+
   return (
     <div className="App">
       <NavBar/>
