@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
-  const [movie, setMovie] = useState({});
+  const [movie, setMovie] = useState();
   const [picture, setPicture] = useState('');
   
   const getMovies = async () => {
@@ -21,12 +21,12 @@ const Home = () => {
     setPicture(res.data.hdurl);
   }
 
+
   useEffect(() => {
     getMovies();
     getPicture();
   }, []);
 
-  console.log(movie)
 
   return (
     <div className='home-container'>

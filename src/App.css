@@ -18,7 +18,6 @@ body{
 }
 
 p{
-  
   color: #fff;
 }
 .navbar{
@@ -69,6 +68,7 @@ p{
 .description-container{
   width: 100%;
   height: 50vh;
+  background-color: salmon;
 }
 
 .poster{
