@@ -7,20 +7,27 @@ import Movies from '../components/Movies.jsx'
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [movie, setMovie] = useState({});
+  const [picture, setPicture] = useState('');
   
   const getMovies = async () => {
     const res = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=NASA&page=1&include_adult=false`);
     setMovies(res.data.results);
   };
 
+  const getPicture = async () => {
+    const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=SPkLKA7bCBamNIY9kJ4ceIeWB67uFjxP5lXkQeNR`);
+    setPicture(res.data.url);
+  }
+
   useEffect(() => {
     getMovies();
+    getPicture();
   }, []);
 
   return (
     <div className='home-container'>
-      <Description movie={movie}/>
-      <p className='title-date'>Picturte of the day: {moment().format('dddd, MMM do YYYY')}</p>
+      <Description movie={movie} picture={picture}/>
+      <p className='title-date'>Picturte of the day: {moment().format('dddd Do, MMM YYYY')}</p>
       <Movies movies={movies}/>
     </div>
   )

@@ -1,7 +1,7 @@
-const Description = () => {
+const Description = ({picture, movie}) => {
   return (
     <div className="description-container">
-    <p>Description</p>
+      <img src={picture} alt="NASA Picture of the day" className="picture-of-the-day"/>
     </div>
   )
 }
