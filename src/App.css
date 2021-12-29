@@ -7,8 +7,8 @@
 :root{
   --font-small: 12px;
   --font-normal: 14px;
-  --font-big: 16px;
-  --font-huge: 20px;
+  --font-big: 24px;
+  --font-huge: 32px;
   --color-background: #000;
   --color-text: #fff;
 }
@@ -23,7 +23,7 @@ p{
 }
 .navbar{
   width: 100%;
-  height: 10vh;
+  height: 5vh;
   background-color: var(--color-background);
   display: flex;
   justify-content: center;
@@ -45,6 +45,8 @@ p{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+
 }
 
 .movies-container{
@@ -74,5 +76,21 @@ p{
 }
 
 .title-date{
-  height: ;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  width: 95%;
+  height: 5vh;
+  text-align: center;
+  font-size: var(--font-big); 
+  margin-bottom: 15px;
+  
+}
+
+.title-date::first-letter{
+  font-size: var(--font-huge);
+  color: red;
+}
+
+.picture-of-the-day{
+  width: 100%;
 }

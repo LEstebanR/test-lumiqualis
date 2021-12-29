@@ -3,6 +3,9 @@ import axios from 'axios';
 import moment from 'moment';
 import Description from '../components/Description.jsx'
 import Movies from '../components/Movies.jsx'
+import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -16,7 +19,7 @@ const Home = () => {
 
   const getPicture = async () => {
     const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=SPkLKA7bCBamNIY9kJ4ceIeWB67uFjxP5lXkQeNR`);
-    setPicture(res.data.url);
+    setPicture(res.data.hdurl);
   }
 
   useEffect(() => {
@@ -26,8 +29,10 @@ const Home = () => {
 
   return (
     <div className='home-container'>
-      <Description movie={movie} picture={picture}/>
-      <p className='title-date'>Picturte of the day: {moment().format('dddd Do, MMM YYYY')}</p>
+      <Description movie={movie} picture={picture}/> 
+      <p className='title-date'>Picture of the day: {moment().format('dddd Do, MMM YYYY')} 
+        <a target="blank" href={picture}><FontAwesomeIcon icon={faCloudDownloadAlt}></FontAwesomeIcon></a>
+      </p>
       <Movies movies={movies}/>
     </div>
   )
