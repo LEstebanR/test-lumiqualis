@@ -94,3 +94,7 @@ p{
 .picture-of-the-day{
   width: 100%;
 }
+
+.home-container a{
+  color: var(--color-text);
+}

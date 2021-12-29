@@ -5,7 +5,6 @@ import Description from '../components/Description.jsx'
 import Movies from '../components/Movies.jsx'
 import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -27,13 +26,15 @@ const Home = () => {
     getPicture();
   }, []);
 
+  console.log(movie)
+
   return (
     <div className='home-container'>
-      <Description movie={movie} picture={picture}/> 
+      <Description movie={movie} picture={picture} /> 
       <p className='title-date'>Picture of the day: {moment().format('dddd Do, MMM YYYY')} 
         <a target="blank" href={picture}><FontAwesomeIcon icon={faCloudDownloadAlt}></FontAwesomeIcon></a>
       </p>
-      <Movies movies={movies}/>
+      <Movies movies={movies} setMovie={setMovie}/>
     </div>
   )
 }
