@@ -2,19 +2,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 :root{
-  --font-small: 12px;
-  --font-normal: 14px;
-  --font-big: 24px;
-  --font-huge: 32px;
+  --font-small: 1.2rem;
+  --font-normal: 1.4rem;
+  --font-big: 2.4rem;
+  --font-huge: 3.2rem;
   --color-background: #000;
   --color-text: #fff;
 }
 
 body{
   background: var(--color-background);
+  font-family: 'Roboto', sans-serif;
 }
 
 p{
@@ -114,7 +116,7 @@ p{
   background-color: rgba(255,255,255,0.9);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   border-radius: 10px;
   box-shadow: rgb(0, 0, 0) 0px 1px 10px;
 
@@ -125,7 +127,9 @@ p{
   color: black;
   text-align: center;
   text-decoration: underline;
-  margin-top: 2%;
+  text-decoration-thickness: auto;
+  padding: 0px 0px 20px;;
+  font-family: ;
 }
 
 .movie-info h2{
@@ -138,6 +142,7 @@ p{
   font-size: var(--font-normal);
   color: black;
   margin: 0 10px 0 10px;
+  line-height: 160%;
  
 }
 
@@ -147,22 +152,60 @@ table{
   font-size: var(--font-normal);
   color: black;
   margin: 0 10px 0 10px;
-  border: solid 1px black;
+  border: solid 1px rgb(51, 51, 51);
+  padding: 4px;
 }
 
 th{
-  background-color: var(--color-background);
+  background-color: rgba(0, 0 ,0, 0.8);
   color: var(--color-text);
+  font-weight: 400;
+  text-align: center;
+  padding: 8px 2px;
 }
 
 td{
   color: black;
   text-align: center;
-  padding: 10px 0 10px 0;
+  padding: 10px 2px;
   height: 10px;
+  font-weight: 400;
 }
 
 .icon{
   color: black;
   font-size: var(--font-normal);
+}
+
+@media (max-width:768px){
+  .movies-container{
+    height: 100%;
+  }
+  .description-container{
+    height: 100%;
+  }
+  .movie-info{
+    width: 100%;
+  }
+  .movie-info h1{
+    font-size: var(--font-big);
+  }
+  .movie-info h2{
+    font-size: var(--font-normal);
+  }
+  .movie-info p{
+    font-size: var(--font-normal);
+  }
+  .movie-info table{
+    font-size: var(--font-normal);
+  }
+  .movie-info th{
+    font-size: var(--font-normal);
+  }
+  .movie-info td{
+    font-size: var(--font-normal);
+  }
+  .movie-info .icon{
+    font-size: var(--font-normal);
+  }
 }
