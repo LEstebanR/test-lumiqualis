@@ -17,7 +17,7 @@ const Home = () => {
   };
 
   const getPicture = async () => {
-    const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=SPkLKA7bCBamNIY9kJ4ceIeWB67uFjxP5lXkQeNR`);
+    const res = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_KEY}`);
     setPicture(res.data.hdurl);
   }
 

@@ -5,7 +5,7 @@ import Search from './pages/Search.jsx';
 import NavBar from './components/NavBar.jsx';
 
 function App() {
-
+  
   return (
     <div className="App">
       <NavBar/>
