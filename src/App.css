@@ -178,34 +178,16 @@ td{
 }
 
 @media (max-width:768px){
-  .movies-container{
-    height: 100%;
+  .navbar{
+    height: 5vh;
   }
   .description-container{
-    height: 100%;
+    height: 40vh;
   }
-  .movie-info{
-    width: 100%;
+  .title-date{
+    height: 10vh;
   }
-  .movie-info h1{
-    font-size: var(--font-big);
-  }
-  .movie-info h2{
-    font-size: var(--font-normal);
-  }
-  .movie-info p{
-    font-size: var(--font-normal);
-  }
-  .movie-info table{
-    font-size: var(--font-normal);
-  }
-  .movie-info th{
-    font-size: var(--font-normal);
-  }
-  .movie-info td{
-    font-size: var(--font-normal);
-  }
-  .movie-info .icon{
-    font-size: var(--font-normal);
+  .movies-container{
+    height: 40vh;
   }
 }
