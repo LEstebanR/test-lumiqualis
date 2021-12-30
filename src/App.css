@@ -2,14 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 62.5%;
 }
 
 :root{
-  --font-small: 1.2rem;
-  --font-normal: 1.4rem;
-  --font-big: 2.4rem;
-  --font-huge: 3.2rem;
+  --font-small: 0.8rem;
+  --font-normal: 1rem;
+  --font-big: 2rem;
+  --font-huge: 3.0rem;
   --color-background: #000;
   --color-text: #fff;
 }
@@ -149,7 +148,7 @@ p{
 table{
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: var(--font-normal);
+  font-size: 14px;
   color: black;
   margin: 0 10px 0 10px;
   border: solid 1px rgb(51, 51, 51);
@@ -162,6 +161,7 @@ th{
   font-weight: 400;
   text-align: center;
   padding: 8px 2px;
+;
 }
 
 td{
@@ -178,6 +178,13 @@ td{
 }
 
 @media (max-width:768px){
+  :root{
+    --font-small: 0.6rem;
+    --font-normal: 0.8rem;
+    --font-big: 1.8rem;
+    --font-huge: 2.8rem;
+
+  }
   .navbar{
     height: 5vh;
   }
