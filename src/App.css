@@ -178,23 +178,24 @@ td{
 }
 
 @media (max-width:768px){
-  :root{
-    --font-small: 0.6rem;
-    --font-normal: 0.8rem;
-    --font-big: 1.8rem;
-    --font-huge: 2.8rem;
-
-  }
+  
   .navbar{
     height: 5vh;
   }
   .description-container{
-    height: 40vh;
+    height: 50vh;
+    
   }
   .title-date{
     height: 10vh;
   }
   .movies-container{
-    height: 40vh;
+    height: 30vh;
+  }
+  .title-date{
+    font-size: var(--font-small); 
+  }
+  .movie-info p{
+    font-size: var(--font-small);
   }
 }
